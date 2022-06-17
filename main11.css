@@ -1,0 +1,71 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.slider-wrapper {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+#btn-prev, #btn-next {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background-color: gray;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity .2s ease-in-out;
+}
+
+#btn-prev:hover, #btn-next:hover {
+  opacity: 0.6;
+}
+
+.slide {
+  display: none;
+}
+
+#btn-next {
+  right: 0;
+}
+
+.slide.active {
+  display: block;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.dots-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.dot.active {
+  background-color: yellowgreen ;
+}
+
+span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: gray;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+span:last-child {
+  margin-right: 0;
+}
