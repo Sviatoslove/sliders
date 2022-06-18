@@ -27,12 +27,13 @@ function dotsSlide() {
         slides[i].classList.remove('active');
         if(slides[i].dataset.slide === currTab) {
           slides[i].classList.add('active');
+          index = i;
         };
       };
     });
   });
 };
-
+console.log(index)
 function changeClass(el) {
   for(var i = 0; i < dots.length; i++){
     dots[i].classList.remove('active');
@@ -42,7 +43,8 @@ function changeClass(el) {
 
 function nextSlide() {
   if(index == slides.length - 1) {
-    index = slides.length - 1;
+    index -= 2;
+    activeSlide(index);
   } else {
     index++;
     activeSlide(index);
@@ -51,7 +53,8 @@ function nextSlide() {
 
 function prevSlide() {
   if(index == 0) {
-    index = 0;
+    index += 2;
+    activeSlide(index);
   } else {
     index--;
     activeSlide(index);
