@@ -33,7 +33,7 @@ function dotsSlide() {
     });
   });
 };
-console.log(index)
+
 function changeClass(el) {
   for(var i = 0; i < dots.length; i++){
     dots[i].classList.remove('active');
@@ -43,7 +43,7 @@ function changeClass(el) {
 
 function nextSlide() {
   if(index == slides.length - 1) {
-    index -= 2;
+    index -= slides.length - 1;
     activeSlide(index);
   } else {
     index++;
@@ -53,7 +53,7 @@ function nextSlide() {
 
 function prevSlide() {
   if(index == 0) {
-    index += 2;
+    index += slides.length - 1;
     activeSlide(index);
   } else {
     index--;
